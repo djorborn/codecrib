@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Preview</title>
+    <style id="style"></style>
+    <script>
+      window.onload = function () {
+        document.getElementById('style').innerHTML = window.sessionStorage.getItem('style');
+        document.body.innerHTML = window.sessionStorage.getItem('body') ;
+        eval(window.sessionStorage.getItem('script'));
+      }
+    </script>
+  </head>
+  <body>
+    
+  </body>
+  </html>

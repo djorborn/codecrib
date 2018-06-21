@@ -1,0 +1,53 @@
+style.
+  #settings {
+    height: 400px;
+    width: 300px;
+    background: #fff;
+    position: absolute;
+    right: 10px;
+    top: 65px;
+    border: solid 1px #333;
+    border-radius: 4px;
+    box-shadow: 1px 1px 6px #333;
+    color: #444;
+    z-index: -1;
+  }
+  .arrow {
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    transform: rotatez(45deg);
+    position: absolute;
+    display: block;
+    bottom: calc(100% - 9px);
+    right: 40px;
+    border-top: solid 1px ;
+    border-left: solid 1px;
+    z-index: 1;
+  }
+  .settings-wrapper {
+  padding: 23px;
+    height: 100%;
+    z-index: 22;
+  }
+  .settings-container {
+    height: 100%;
+    border: solid 2px #fff;
+    border-radius: 3px;
+    z-index: 3;
+  }
+  @media only screen and  (max-width: 600px) {
+    #settings {
+      width: calc(90% - 0px);
+      padding: 0;
+      margin: 0;
+      top: 65px;
+      left: 5%;
+    }
+  }
+#settings.hide
+  
+  .settings-wrapper
+    .settings-container
+      h3 Settings
+  .arrow
