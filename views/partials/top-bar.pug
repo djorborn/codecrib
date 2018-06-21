@@ -1,0 +1,69 @@
+//- Top Bar Component
+.top-bar-wrapper
+  .title-wrapper
+    p(contenteditable="true" id="title").title= (crib ? (crib.title ? crib.title : false) : false) || 'Untitled'
+    p(id="title2").title
+    - title = (user ? 'A Crib by ' + user.name : false)
+    p.subtitle=(title ? title : 'Login To Save')
+  .buttons-wrapper
+    .buttons
+      if user
+        button Save
+          span
+        
+      else
+        a(href="/login/auth"): button
+          div(style="display:flex; justify-content: center; align-items: center;" )
+            i(class="fa fa-github" style="padding: 0 6px 0 0")
+            div <small>Login with</small> <b>Github</b>
+          span
+      button(id="settings-button") Settings
+        span
+      if user
+        .avatar(title="Your Account" style="background: url("+user.imageUrl+"); background-size: 100%")
+        
+include settings
+//- Toggle Title Code And Update Title
+script.
+  var title2 = document.getElementById('title2');
+
+  title2.onclick = function () {
+    this.style.display = 'none'
+    title.style.display = 'block'
+    title.focus()
+  }
+  title.onfocus = function () {
+    this.style.backgroundColor = "#444";
+  }
+  
+  title.onblur = function () {
+    title2.style.display = 'block'
+    this.style.display = 'none';
+    title2.innerText = title.innerText;
+    updateTitle();
+  }
+  title.onkeydown = function (e) {
+    if (e.keyCode === 13) {
+      e.preventDefault();
+      console.log('enter')
+    title2.style.display = 'block'
+    this.style.display = 'none';
+    title2.innerText = title.innerText;
+    updateTitle();
+    }
+  }
+  
+  function updateTitle () {
+    axios.post('/api/update-title')
+    .then(function(res){
+      console.log(res.data)
+      window.sessionStorage.setItem('title', res.data.title)
+    })
+  }
+script.
+  var settingsMenu = document.getElementById('settings');
+  var settingsButton = document.getElementById('settings-button');
+  
+  settingsButton.onclick = function () {
+    settingsMenu.classList.toggle('hide');
+  }

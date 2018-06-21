@@ -1,0 +1,73 @@
+/**
+ * Top Bar Styles
+ */
+  .top-bar-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    background-color: var(--bgColor);
+    color: var(--font-color);
+    font-family: sans-serif;
+  }
+  .title-wrapper {
+    padding-left: 10px;
+  }
+  .title {
+    font-size: 20px;
+    padding: 3px;
+    outline-color: #666;
+  }
+  #title2 {display: none;}
+  .subtitle {
+    font-size: 16px;
+  }
+  .buttons-wrapper {
+    padding-right: 10px;
+  }
+  .buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .buttons button {
+    background: transparent;
+    border: solid 3px #999;
+    border-radius: 3px;
+    color: #fff;
+    height: 40px;
+    padding: 0 16px;
+    position: relative;
+    margin-left: 12px;
+    cursor: pointer;
+  }
+  .buttons button span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background-color: var(--accent-color);
+    top: 0;
+    left: 0;
+  }
+  .buttons button:hover span {
+    background-color: var(--accent-color-active);
+  }
+  .avatar {
+    width: 38px;
+    padding-left: 6px;
+    background-position: top;
+    background-size: 100%;
+    width: 40px;
+    border: solid 3px #999;
+    border-radius: 3px;
+    color: #fff;
+    height: 40px;
+    padding: 0 16px;
+    position: relative;
+    margin-left: 12px;
+    cursor: pointer;
+  }
+.avatar:hover {
+  opacity: 2;
+}

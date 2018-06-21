@@ -1,0 +1,71 @@
+style.
+  #app {
+    width: calc(100%);
+    height: calc(100vh - 60px);
+    margin: auto;
+    background:  var(--bgColor);
+    border-left: solid 5px var(--bgColor);
+    border-right: solid 5px var(--bgColor);
+    border-bottom: solid 5px var(--bgColor);
+  }
+  .editor {
+  
+  }
+  #preview {
+    background: #fff;
+    position: relative;
+  }
+ .CodeMirror {
+   height: calc(100% - var(--topper-height));
+   width: 100%;
+ }
+ .topper {
+   width: 100%;
+   height: var(--topper-height);
+   background-color: rgba(0, 0, 0, .5);
+   color: var(--font-color);
+   font-family: var(--font-family);
+   display: flex;
+   align-items: center;
+   font-size: 13px;
+   padding-left: 10px;
+   padding-top: 1px;
+   border-bottom: solid 1px var(--accent-color);
+ }
+ iframe {
+   border: solid 0px;
+   height: 100%;
+   position: absolute
+ }
+ //- PUG
+#app
+  #left
+    #html
+      .topper HTML
+      
+    #js
+      .topper JS
+      
+
+  #right
+    #css
+      .topper CSS
+      
+    #preview
+      .frame
+        iframe(
+          id="iframe" 
+          src="/preview" 
+          name="CodeCrib" 
+          allowfullscreen="true" 
+          sandbox="allow-forms allow-modals allow-pointer-lock allow-popups allow-same-origin allow-scripts" 
+          allow="geolocation; microphone; camera; midi; vr" 
+          allowtransparency="true" 
+          allowpaymentrequest="true"
+          width="100%"
+          height="100%"
+          border="hidden"
+          class="")  
+
+script(src="/js/partition.min.js")
+script(src="/js/crib.client.js") 

@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+  - title = (user ? 'A Crib by ' + user.name : false)
+    title=title || 'Code Crib'
+    link(rel="stylesheet" href="css/style.css")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.38.0/theme/hopscotch.min.css")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.38.0/codemirror.min.css")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.38.0/codemirror.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.38.0/mode/xml/xml.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.38.0/mode/css/css.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.38.0/mode/javascript/javascript.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.38.0/addon/edit/closetag.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.38.0/addon/edit/closebrackets.min.js")
+  body
+    include partials/top-bar
+    
+    include partials/crib

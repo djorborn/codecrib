@@ -1,0 +1,28 @@
+@import "https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css";
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css";
+@import "top-bar.css";
+:root {
+   --font-color: #fff;
+   --bgColor: #434;
+   --accent-color: #FF999988;
+   --accent-color-active: #FF9999bb;
+  --topper-height: 19px;
+  --font-family: sans-serif;
+}
+body,
+h1,
+h2, 
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+body * {
+  box-sizing: border-box;
+}
+.hide {
+  opacity: 0;
+  z-index: -1;
+}
