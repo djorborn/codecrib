@@ -17,3 +17,5 @@ TODO
  
 # Doing Now...
 ## Set up a simple live preview and save code to sessionStorage
+
+![screen shot](http://res.cloudinary.com/djorborn/image/upload/v1529625362/DeepinScreenshot_select-area_20180621195225_emvme7.png)
