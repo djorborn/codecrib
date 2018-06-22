@@ -8,7 +8,7 @@ got the avatar_url and image set
 login button
 Crib Model
 settings wrapper
-
+![screen shot](http://res.cloudinary.com/djorborn/image/upload/v1529625362/DeepinScreenshot_select-area_20180621195225_emvme7.png)
 TODO
  - [] Settings Toggle
  - [ ] Settings Menu
